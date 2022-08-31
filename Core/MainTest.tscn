@@ -1,3 +1,20 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource path="res://Core/PLAYER.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Core/BACKGROUND.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Core/MAIN.gd" type="Script" id=3]
+
+[node name="MAIN" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="PLAYER" parent="." instance=ExtResource( 1 )]
+position = Vector2( 122, 85 )
+
+[node name="Background" parent="." instance=ExtResource( 2 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2( 5, 5 )
+anchor_mode = 0
+current = true
+limit_smoothed = true
+smoothing_enabled = true
