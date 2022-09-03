@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var velocity = Vector2(0,0)
-const MAX_HORIZONTAL_SPEED = 120
+const MAX_HORIZONTAL_SPEED = 180
 
 func _ready():
 	$AnimatedSprite.play("fly")
