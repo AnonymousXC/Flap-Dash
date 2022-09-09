@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Edited/Bar 1.png" type="Texture" id=2]
+
+[node name="PIPES" type="Node2D"]
+scale = Vector2( 2, 2 )
+
+[node name="PipeTop" type="KinematicBody2D" parent="."]
+position = Vector2( 0, -122 )
+
+[node name="Bar2" type="Sprite" parent="PipeTop"]
+position = Vector2( 0, 8 )
+rotation = -3.14159
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="PipeTop"]
+position = Vector2( 0, 52 )
+rotation = -3.14159
+polygon = PoolVector2Array( -16.5, -40, 16.5, -40, 16.5, -24, 15.5, -24, 15.5, -23, 14.5, -23, 14.5, 128, -14.5, 128, -14.5, -23, -15.5, -23, -15.5, -24, -16.5, -24 )
+
+[node name="PipeBottom" type="KinematicBody2D" parent="."]
+position = Vector2( 0, 106.5 )
+
+[node name="Bar1" type="Sprite" parent="PipeBottom"]
+position = Vector2( 0, -3.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PipeBottom"]
+position = Vector2( 0, -47.5 )
+polygon = PoolVector2Array( -16.5, -40, 16.5, -40, 16.5, -24, 15.5, -24, 15.5, -23, 14.5, -23, 14.5, 128, -14.5, 128, -14.5, -23, -15.5, -23, -15.5, -24, -16.5, -24 )
